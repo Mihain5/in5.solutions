@@ -85,8 +85,8 @@ nav {
 .hero {
     position: relative;
     overflow: hidden;
-    padding: 100px 0; /* Adjust this value as needed for vertical spacing */
-    background-color: #E3F2FD; /* Light blue background to match the SVG */
+    padding: 100px 0;
+    background-color: #E3F2FD;
 }
 
 .hero-background {
@@ -111,17 +111,17 @@ nav {
 
 .hero h1,
 .hero p {
-    color: #424242; /* Ensure text color contrasts with the background */
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Subtle text shadow for readability */
+    color: #424242;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
 .hero h1 {
-    font-size: 3rem; /* Adjust as needed */
+    font-size: 3rem;
     margin-bottom: 1rem;
 }
 
 .hero p {
-    font-size: 1.2rem; /* Adjust as needed */
+    font-size: 1.2rem;
     margin-bottom: 0.5rem;
 }
 
