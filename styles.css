@@ -87,6 +87,9 @@ nav {
     overflow: hidden;
     padding: 100px 0;
     background-color: #E3F2FD;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
 }
 
 .hero-background {
@@ -273,4 +276,84 @@ nav {
 footer {
     background-color: #424242;
     color: #FFFFFF;
-    padding: 4rem 0
+    padding: 4rem 0 2rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.footer-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.footer-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-column h3 {
+    color: #FFFFFF;
+    margin-bottom: 1rem;
+}
+
+.footer-column ul {
+    list-style-type: none;
+}
+
+.footer-column li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none; /* You might want to implement a mobile menu */
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .services-grid,
+    .values-grid,
+    .method-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .case-studies ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .case-studies li {
+        margin-bottom: 1rem;
+    }
+
+    .stats {
+        flex-direction: column;
+    }
+
+    .stat-item {
+        margin-bottom: 1rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
