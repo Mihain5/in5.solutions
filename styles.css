@@ -83,35 +83,48 @@ nav {
 
 /* Hero section */
 .hero {
-    background-color: #BBDEFB;
-    padding: 8rem 0 4rem;
-    display: flex;
-    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 100px 0; /* Adjust this value as needed for vertical spacing */
+    background-color: #E3F2FD; /* Light blue background to match the SVG */
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+}
+
+.hero-background svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .hero-content {
-    flex: 1;
+    position: relative;
+    z-index: 1;
 }
 
-.hero-image {
-    flex: 1;
-    text-align: right;
+.hero h1,
+.hero p {
+    color: #424242; /* Ensure text color contrasts with the background */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Subtle text shadow for readability */
 }
 
-.hero-image svg {
-    width: 100%;
-    height: auto;
-    max-width: 800px;
-    display: block;
-    margin: 0 auto;
+.hero h1 {
+    font-size: 3rem; /* Adjust as needed */
+    margin-bottom: 1rem;
 }
 
-.hero-image img {
-    max-width: 100%;
-    height: auto;
+.hero p {
+    font-size: 1.2rem; /* Adjust as needed */
+    margin-bottom: 0.5rem;
 }
 
-/* CTA Button */
 .cta-button {
     display: inline-block;
     background-color: #2196F3;
@@ -121,6 +134,11 @@ nav {
     border-radius: 4px;
     font-weight: 500;
     margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #1976D2;
 }
 
 /* AI Services section */
