@@ -114,76 +114,86 @@ nav {
 }
 .what-i-do {
     padding: 80px 0;
-    background-color: #f8f9fa;
+    background-color: #ffffff;
 }
+
 .what-i-do h2 {
     text-align: center;
     font-size: 36px;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
+    color: #333;
 }
+
 .services-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    gap: 40px;
 }
+
 .service-card {
-    background-color: #ffffff;
+    background-color: #f8f9fa;
     border-radius: 10px;
     padding: 30px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
 }
+
 .icon {
-    font-size: 24px;
-    width: 50px;
-    height: 50px;
+    font-size: 32px;
+    width: 60px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
+    border-radius: 12px;
     margin-bottom: 20px;
 }
+
 .code-icon {
     background-color: #e8eaf6;
     color: #3f51b5;
 }
+
 .bulb-icon {
     background-color: #fff9c4;
     color: #fbc02d;
 }
+
 .pen-icon {
     background-color: #e1f5fe;
     color: #03a9f4;
 }
+
 .lock-icon {
     background-color: #ffebee;
     color: #e57373;
 }
+
 .service-card h3 {
     font-size: 24px;
     margin-bottom: 15px;
+    color: #333;
 }
+
 .service-card p {
     color: #666;
     margin-bottom: 20px;
+    flex-grow: 1;
 }
+
 .service-link {
     color: #333;
     text-decoration: none;
     font-weight: 600;
+    align-self: flex-start;
 }
+
 .service-link:hover {
     text-decoration: underline;
 }
+
 @media (max-width: 768px) {
     .services-grid {
         grid-template-columns: 1fr;
-    }
-    .hero {
-        flex-direction: column;
-        text-align: center;
-    }
-    .hero-content {
-        padding-right: 0;
-        margin-bottom: 40px;
     }
 }
