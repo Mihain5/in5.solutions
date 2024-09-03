@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if (targetElement) {
                 window.scrollTo({
-                    top: targetElement.offsetTop - 70, // Adjust for fixed header
+                    top: targetElement.offsetTop - 60,
                     behavior: 'smooth'
                 });
 
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
-            if (pageYOffset >= sectionTop - 100) {
+            if (pageYOffset >= sectionTop - 70) {
                 current = section.getAttribute('id');
             }
         });
