@@ -14,13 +14,18 @@ body {
 header {
     background-color: #ffffff;
     padding: 20px 0;
-    /* Removed the border-bottom property */
+    border-bottom: none;
+}
+
+header * {
+    border: none;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: none;
 }
 
 .logo {
@@ -52,7 +57,7 @@ nav {
 }
 
 .social-icons a {
-    color: #333; /* Changed to match the text color */
+    color: #333;
     margin-left: 20px;
     font-size: 18px;
 }
