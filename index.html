@@ -1,222 +1,155 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>In5.solutions - Empowering Your Business with AI-Driven Automation</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-</head>
 <body>
     <header>
         <nav class="container">
-            <div class="logo">In5.solutions</div>
+            <div class="logo">In5.AI</div>
             <ul class="nav-menu">
-                <li><a href="#ai-services">AI Services</a></li>
-                <li><a href="#our-values">Our Values</a></li>
-                <li><a href="#case-studies">Case Studies</a></li>
-                <li><a href="#our-method">Our Method</a></li>
-                <li><a href="#about-us">About us</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li>
-                    <select class="language-selector">
-                        <option>English - En</option>
-                    </select>
-                </li>
             </ul>
+            <div class="social-icons">
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" aria-label="Email"><i class="far fa-envelope"></i></a>
+            </div>
         </nav>
     </header>
 
     <main>
-        <section id="hero" class="hero">
-            <div class="hero-background">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600">
-                    <rect width="100%" height="100%" fill="#E3F2FD"/>
-                    <defs>
-                        <linearGradient id="circleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" style="stop-color:#2196F3;stop-opacity:0.4" />
-                            <stop offset="100%" style="stop-color:#64B5F6;stop-opacity:0.4" />
-                        </linearGradient>
-                    </defs>
-                    <circle cx="1000" cy="300" r="250" fill="url(#circleGrad)" />
-                    <path d="M0,300 Q300,150 600,300 T1200,300" fill="none" stroke="#2196F3" stroke-width="3" opacity="0.7" />
-                    <path d="M0,330 Q300,180 600,330 T1200,330" fill="none" stroke="#64B5F6" stroke-width="2" opacity="0.6" />
-                    <path d="M0,360 Q300,210 600,360 T1200,360" fill="none" stroke="#90CAF9" stroke-width="1" opacity="0.5" />
-                    <circle cx="200" cy="250" r="15" fill="#0D47A1" opacity="0.8" />
-                    <circle cx="500" cy="350" r="20" fill="#1565C0" opacity="0.8" />
-                    <circle cx="800" cy="280" r="18" fill="#1976D2" opacity="0.8" />
-                    <path d="M200,250 L500,350 L800,280" fill="none" stroke="#0D47A1" stroke-width="2" opacity="0.6" />
-                </svg>
+        <section id="hero" class="hero container">
+            <div class="hero-content">
+                <h1>Hey, I'm In5</h1>
+                <h2>I Help Businesses Implement AI</h2>
+                <a href="#contact" class="cta-button">Work With Me</a>
+                <div class="social-icons">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" aria-label="Email"><i class="far fa-envelope"></i></a>
+                </div>
             </div>
-            <div class="container hero-content">
-                <h1> Empowering Your Business with AI-Driven Automation</h1>
-                <p>Welcome to In5 Solutions! As a budding startup, we're passionate about helping businesses</p>
-                <p> streamline their operations and innovate through the power of automation and artificial intelligence.</p>
-                <p>While AI is a crucial tool in our toolkit, our focus is on creating practical, effective solutions 
-                <p> tailored toyour unique needs.</p>
-                <a href="#contact" class="cta-button">Write to us</a>
+            <div class="hero-image">
+                <img src="/api/placeholder/400/400" alt="In5 AI Expert" />
             </div>
         </section>
 
-        <section id="ai-services" class="ai-services">
-            <div class="container">
-                <h2>Services</h2>
-                <p>Discover our range of services designed to bring the latest automation and AI technology to your
-                    business. Our solutions are crafted with the aim to simplify your processes and boost your
-                    productivity, all while being mindful of your specific goals and challenges.</p>
-                <div class="services-grid">
-                    <div class="service-item">
-                        <h3>Automations</h3>
-                        <p>Enhance your business operations with our personalized automation solutions. Whether it's
-                        optimizing workflows or automating routine tasks, we're here to help you work smarter, not harder.</p>
-                    </div>
-                    <div class="service-item">
-                        <h3>Generative AI</h3>
-                        <p>Explore new creative avenues with our generative AI solutions. We assist you in leveraging AI to
-                        innovate and design solutions that set you apart from the competition.</p>
-                    </div>
+        <section id="services" class="services container">
+            <h2>What I do</h2>
+            <div class="services-grid">
+                <div class="service-item">
+                    <i class="fas fa-code"></i>
+                    <h3>AI Development</h3>
+                    <p>Tailored AI solutions for businesses. We write the code, integrate systems, and deliver AI-powered automation solutions.</p>
+                    <a href="#" class="service-link">Book a Call →</a>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>AI Consulting</h3>
+                    <p>Guiding you through AI. Offering education, brainstorming, feasibility analysis, roadmap creation, and strategy planning for your AI projects.</p>
+                    <a href="#" class="service-link">Book a Call →</a>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-pen"></i>
+                    <h3>Content Creation</h3>
+                    <p>Sharing my learnings with entrepreneurs and business owners on my YouTube channel.</p>
+                    <a href="#" class="service-link">My YouTube Channel →</a>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-file-alt"></i>
+                    <h3>AI Resources & Templates</h3>
+                    <p>Free AI Agent Automation & Workflow Templates Available on my Gumroad.</p>
+                    <a href="#" class="service-link">My Free Resources →</a>
                 </div>
             </div>
         </section>
 
-        <section id="our-values" class="our-values">
-            <div class="container">
-                <h2>Our Values</h2>
-                <div class="values-grid">
-                    <div class="value-item">
-                        <h3>Customer-Centricity</h3>
-                        <p>Our highest priority is our customers. We tailor solutions to their unique needs and challenges.</p>
-                    </div>
-                    <div class="value-item">
-                        <h3>Innovation</h3>
-                        <p>We deliver innovative solutions that create real value for our customers.</p>
-                    </div>
-                    <div class="value-item">
-                        <h3>Integrity</h3>
-                        <p>We build trust through transparent communication and reliable service.</p>
-                    </div>
-                    <div class="value-item">
-                        <h3>Responsibility</h3>
-                        <p>We take responsibility for our actions and decisions, ensuring a positive impact for our customers.</p>
-                    </div>
+        <section id="solutions" class="solutions container">
+            <h2>I Deliver Tailored AI Solutions</h2>
+            <p>Some examples of solutions I've developed for businesses.<br>Need something else? I'm always happy to explore new use cases!</p>
+            <div class="solutions-grid">
+                <div class="solution-category">
+                    <h3>AI Agents</h3>
+                    <ul>
+                        <li>AI CRM Automation</li>
+                        <li>AI Content Agents</li>
+                        <li>AI Chatbot Agents</li>
+                        <li>AI Email Agents</li>
+                        <li>& More...</li>
+                    </ul>
                 </div>
-                <div class="values-description">
-                    <h3>Nulla lobortis nunc vitae nisi semper velit</h3>
-                    <p>Vestibulum sit amet tortor libero lobortis semper at et odio. In eu tellus tellus. Pellentesque ullamcorper ultrices. Aenean facilisis vitae purus facilisis semper.</p>
+                <div class="solution-category">
+                    <h3>AI Automations</h3>
+                    <ul>
+                        <li>AI GPTs Automation</li>
+                        <li>AI Workflow Automations</li>
+                        <li>AI Marketing Automations</li>
+                        <li>AI Sales Automation</li>
+                    </ul>
                 </div>
-            </div>
-        </section>
-
-        <section id="case-studies" class="case-studies">
-            <div class="container">
-                <h2>Case Studies</h2>
-                <ul>
-                    <li>Corporate</li>
-                    <li>Advertising</li>
-                    <li>Marketing</li>
-                    <li>Government</li>
-                    <li>Creative</li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="our-method" class="our-method">
-            <div class="container">
-                <h2>Our Method</h2>
-                <div class="method-grid">
-                    <div class="method-item">
-                        <div class="method-icon">1</div>
-                        <h3>Analysis</h3>
-                        <p>We analyze your current processes and identify areas for AI automation.</p>
-                    </div>
-                    <div class="method-item">
-                        <div class="method-icon">2</div>
-                        <h3>Design</h3>
-                        <p>Our experts design custom AI solutions tailored to your specific needs.</p>
-                    </div>
-                    <div class="method-item">
-                        <div class="method-icon">3</div>
-                        <h3>Implementation</h3>
-                        <p>We implement the AI automation solutions seamlessly into your existing systems.</p>
-                    </div>
-                    <div class="method-item">
-                        <div class="method-icon">4</div>
-                        <h3>Optimization</h3>
-                        <p>We continuously monitor and optimize the AI solutions for maximum efficiency.</p>
-                    </div>
+                <div class="solution-category">
+                    <h3>Consulting & Coaching</h3>
+                    <ul>
+                        <li>AI project consulting</li>
+                        <li>Feasibility assessment</li>
+                        <li>AI Ecosystem Coaching</li>
+                        <li>AI Business Education</li>
+                        <li>& More...</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-        <section id="about-us" class="about-us">
-            <div class="container">
-                <h2>About Us</h2>
-                <div class="stats">
-                    <div class="stat-item">
-                        <span class="stat-number">+300</span>
-                        <span class="stat-label">Clients</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">+500</span>
-                        <span class="stat-label">Projects</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">+200</span>
-                        <span class="stat-label">Employees</span>
-                    </div>
+        <section id="resources" class="resources container">
+            <h2>Videos & Free Resources</h2>
+            <div class="resources-grid">
+                <div class="resource-item">
+                    <img src="/api/placeholder/300/200" alt="AI Personal Assistant Video Thumbnail" />
+                    <h3>Build an AI Agent Team That Does EVERYTHING for You! (No-Code)</h3>
+                    <p>AI Agents • August 29, 2023</p>
+                </div>
+                <div class="resource-item">
+                    <img src="/api/placeholder/300/200" alt="Social Media AI Agent Team Video Thumbnail" />
+                    <h3>How to Build Your First AI Agent Social Media Team</h3>
+                    <p>AI Agents • August 15, 2023</p>
+                </div>
+                <div class="resource-item">
+                    <img src="/api/placeholder/300/200" alt="AI Agents Connection Guide Video Thumbnail" />
+                    <h3>Effortlessly Connect Your AI Agents to Any Software: A Step-by-Step Guide</h3>
+                    <p>AI Agents • August 8, 2023</p>
                 </div>
             </div>
-        </section>
-
-        <section id="contact" class="contact">
-            <div class="container">
-                <h2>Ready to get started?</h2>
-                <p>Pellentesque ac bibendum tortor. Nulla eget lobortis lacus.</p>
-                <a href="#" class="cta-button">Write to us</a>
-            </div>
+            <a href="#" class="cta-button">Browse all</a>
         </section>
     </main>
 
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">In5.solutions</div>
+                <div class="footer-logo">In5.AI</div>
                 <div class="footer-links">
-                    <div class="footer-column">
-                        <h3>COMPANY</h3>
-                        <ul>
-                            <li>Donec dignissim</li>
-                            <li>Curabitur egestas</li>
-                            <li>Nam posuere</li>
-                            <li>Aenean facilisis</li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h3>Services</h3>
-                        <ul>
-                            <li>Cras convallis</li>
-                            <li>Vestibulum faucibus</li>
-                            <li>Quisque lacinia purus</li>
-                            <li>Aliquam nec ex</li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h3>Resources</h3>
-                        <ul>
-                            <li>Suspendisse porttitor</li>
-                            <li>Nam posuere</li>
-                            <li>Curabitur egestas</li>
-                        </ul>
+                    <h3>Pages</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Connect</h3>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Email"><i class="far fa-envelope"></i></a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>Nam posuere accumsan porta. Integer id orci sed ante tincidunt tincidunt sit amet sed libero.</p>
-                <p>&copy; Skyrev Theme 2020</p>
+                <p>&copy; 2023 In5.AI. All rights reserved.</p>
             </div>
         </div>
     </footer>
-
-    <script src="in5solutions-js.js"></script>
 </body>
-</html>
