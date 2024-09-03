@@ -201,7 +201,7 @@ nav {
 }
 
 .tailored-solutions {
-    padding: 120px 0;
+    padding: 80px 0;
     background-color: #ffffff;
 }
 
@@ -214,8 +214,8 @@ nav {
 
 .underline {
     width: 100px;
-    height: 3px;
-    background-color: #3f51b5;
+    height: 2px;
+    background-color: #e0e0e0;
     margin: 0 auto 20px;
 }
 
@@ -223,35 +223,53 @@ nav {
     text-align: center;
     color: #666;
     margin-bottom: 10px;
+    font-size: 14px;
 }
 
 .solutions-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+    display: flex;
+    justify-content: space-between;
     margin-top: 60px;
 }
 
 .solution-category {
-    background-color: #f8f9fa;
-    border-radius: 10px;
-    padding: 30px;
+    flex: 1;
     text-align: center;
+    padding: 0 20px;
+    border-right: 1px solid #e0e0e0;
+}
+
+.solution-category:last-child {
+    border-right: none;
 }
 
 .solution-category .icon {
-    font-size: 32px;
     width: 60px;
     height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 12px;
     margin: 0 auto 20px;
+    border-radius: 12px;
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.lock-icon {
+    background-color: #ffebee;
+    background-image: url('path-to-your-lock-icon.svg');
+}
+
+.code-icon {
+    background-color: #e8eaf6;
+    background-image: url('path-to-your-code-icon.svg');
+}
+
+.bulb-icon {
+    background-color: #fff9c4;
+    background-image: url('path-to-your-bulb-icon.svg');
 }
 
 .solution-category h3 {
-    font-size: 24px;
+    font-size: 20px;
     margin-bottom: 20px;
     color: #333;
 }
@@ -259,15 +277,27 @@ nav {
 .solution-category ul {
     list-style-type: none;
     padding: 0;
+    text-align: center;
 }
 
 .solution-category li {
     color: #666;
     margin-bottom: 10px;
+    font-size: 14px;
 }
 
 @media (max-width: 768px) {
     .solutions-grid {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+    }
+    
+    .solution-category {
+        border-right: none;
+        border-bottom: 1px solid #e0e0e0;
+        padding: 30px 0;
+    }
+    
+    .solution-category:last-child {
+        border-bottom: none;
     }
 }
