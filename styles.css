@@ -14,7 +14,7 @@ body {
 header {
     background-color: #ffffff;
     padding: 20px 0;
-    border-bottom: 1px solid #f0f0f0;
+    /* Removed the border-bottom property */
 }
 
 nav {
@@ -52,7 +52,7 @@ nav {
 }
 
 .social-icons a {
-    color: #0000ff;
+    color: #333; /* Changed to match the text color */
     margin-left: 20px;
     font-size: 18px;
 }
