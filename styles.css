@@ -1,11 +1,8 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
 }
 
 .container {
@@ -15,7 +12,9 @@ body {
 }
 
 header {
+    background-color: #ffffff;
     padding: 20px 0;
+    border-bottom: 1px solid #f0f0f0;
 }
 
 nav {
@@ -25,13 +24,16 @@ nav {
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: bold;
+    color: #333;
 }
 
 .nav-menu {
     display: flex;
     list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-menu li {
@@ -41,10 +43,31 @@ nav {
 .nav-menu a {
     text-decoration: none;
     color: #333;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.social-icons {
+    display: flex;
 }
 
 .social-icons a {
-    color: #333;
+    color: #0000ff;
     margin-left: 20px;
-    font-size: 1.2rem;
+    font-size: 18px;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .nav-menu, .social-icons {
+        display: none;
+    }
+    .menu-icon {
+        display: block;
+    }
 }
