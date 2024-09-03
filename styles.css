@@ -135,3 +135,84 @@ nav {
   height: auto;
   border-radius: 50%;
 }
+
+.what-i-do {
+  padding: 80px 0;
+  background-color: #f8f9fa;
+}
+
+.what-i-do h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.service-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.icon {
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.code-icon {
+  background-color: #e8eaf6;
+  color: #3f51b5;
+}
+
+.bulb-icon {
+  background-color: #fff9c4;
+  color: #fbc02d;
+}
+
+.pen-icon {
+  background-color: #e1f5fe;
+  color: #03a9f4;
+}
+
+.lock-icon {
+  background-color: #ffebee;
+  color: #e57373;
+}
+
+.service-card h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.service-link {
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.service-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
