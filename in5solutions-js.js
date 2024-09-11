@@ -26,12 +26,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 const headerOffset = 60;
                 const elementPosition = targetElement.getBoundingClientRect().top;
                 const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
                 window.scrollTo({
                     top: offsetPosition,
                     behavior: 'smooth'
                 });
-
                 // Close mobile menu after clicking a link
                 navMenu.classList.remove('active');
             }
@@ -43,20 +41,17 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', function() {
         // Clear our timeout throughout the scroll
         window.clearTimeout(isScrolling);
-
         // Set a timeout to run after scrolling ends
         isScrolling = setTimeout(function() {
             let current = '';
             const sections = document.querySelectorAll('section');
             const navLinks = document.querySelectorAll('.nav-menu a');
-
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
                 if (pageYOffset >= sectionTop - 70) {
                     current = section.getAttribute('id');
                 }
             });
-
             navLinks.forEach(link => {
                 link.classList.remove('active');
                 if (link.getAttribute('href').substring(1) === current) {
@@ -65,22 +60,26 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }, 66);
     }, false);
-});
-// Contact form submission
-document.addEventListener('DOMContentLoaded', function() {
+
+    // Contact form submission
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            // Here you would typically send the form data to a server
-            // For now, we'll just log it to the console
             const formData = new FormData(contactForm);
-            console.log('Form submitted with data:');
-            for (let [key, value] of formData.entries()) {
-                console.log(key + ': ' + value);
-            }
-            alert('Thank you for your message. We will get back to you soon!');
-            contactForm.reset();
+            fetch(contactForm.action, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(result => {
+                alert(result);
+                contactForm.reset();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Oops! There was a problem submitting your form');
+            });
         });
     }
 });
