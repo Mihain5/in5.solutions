@@ -1,12 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.querySelector('.menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
-
     // Toggle mobile menu
     menuToggle.addEventListener('click', function() {
         navMenu.classList.toggle('active');
     });
-
     // Close mobile menu when clicking outside
     document.addEventListener('click', function(event) {
         const isClickInsideMenu = navMenu.contains(event.target);
@@ -15,7 +13,6 @@ document.addEventListener('DOMContentLoaded', function() {
             navMenu.classList.remove('active');
         }
     });
-
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -35,7 +32,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-
     // Add active class to nav items on scroll (with debounce)
     let isScrolling;
     window.addEventListener('scroll', function() {
@@ -60,21 +56,29 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }, 66);
     }, false);
-
     // Contact form submission
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             const formData = new FormData(contactForm);
+            const jsonData = {};
+            formData.forEach((value, key) => {jsonData[key] = value});
+            
             fetch(contactForm.action, {
                 method: 'POST',
-                body: formData
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(jsonData)
             })
-            .then(response => response.text())
-            .then(result => {
-                alert(result);
-                contactForm.reset();
+            .then(response => {
+                if (response.ok) {
+                    alert('Thank you for your message. We will get back to you soon!');
+                    contactForm.reset();
+                } else {
+                    alert('Oops! There was a problem submitting your form');
+                }
             })
             .catch(error => {
                 console.error('Error:', error);
