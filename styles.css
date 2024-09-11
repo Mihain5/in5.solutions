@@ -119,13 +119,15 @@ nav {
 .hero-image {
     flex: 1;
     max-width: 50%;
-    text-align: right;
+    height: 100%;
+    overflow: hidden;
 }
 
 .hero-image img {
     max-width: 100%;
     height: auto;
-    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
 }
 
 /* What I Do Section */
