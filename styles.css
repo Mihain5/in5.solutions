@@ -80,6 +80,9 @@ nav {
 /* Hero Section */
 .hero {
     padding: 80px 0;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
 }
 
 .hero .container {
