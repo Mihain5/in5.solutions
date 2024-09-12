@@ -1,13 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
   const blogContainer = document.getElementById('blog-posts');
   const searchInput = document.getElementById('search');
+  const categoryLinks = document.querySelectorAll('.category');
+
+  let allPosts = [];
 
   // Fetch blog data
   fetch('blogData.json')
     .then(response => response.json())
     .then(posts => {
-      displayPosts(posts);
-      searchInput.addEventListener('input', () => filterPosts(posts, searchInput.value));
+      allPosts = posts;
+      displayPosts(allPosts); // Initially display all posts
+      searchInput.addEventListener('input', () => filterPosts(searchInput.value));
+      categoryLinks.forEach(category => category.addEventListener('click', filterByCategory));
     });
 
   function displayPosts(posts) {
@@ -23,12 +28,18 @@ document.addEventListener("DOMContentLoaded", () => {
     `).join('');
   }
 
-  function filterPosts(posts, query) {
-    const filteredPosts = posts.filter(post => 
+  function filterPosts(query) {
+    const filteredPosts = allPosts.filter(post => 
       post.title.toLowerCase().includes(query.toLowerCase()) ||
       post.content.toLowerCase().includes(query.toLowerCase()) ||
       post.tags.some(tag => tag.toLowerCase().includes(query.toLowerCase()))
     );
+    displayPosts(filteredPosts);
+  }
+
+  function filterByCategory(e) {
+    const selectedCategory = e.currentTarget.getAttribute('data-category');
+    const filteredPosts = allPosts.filter(post => post.category.toLowerCase() === selectedCategory.toLowerCase());
     displayPosts(filteredPosts);
   }
 });
