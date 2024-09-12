@@ -601,6 +601,7 @@ footer {
     margin-right: 10px;
 }
 
+
 /* Dropdown styles */
 .nav-menu .dropdown {
     position: relative;
@@ -626,4 +627,5 @@ footer {
     font-size: inherit;
     cursor: pointer;
     color: inherit;
+}
 }
