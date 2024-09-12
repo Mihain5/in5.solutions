@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Automating Tasks with Shortcuts",
+    "subheadlines": ["Why Automate?", "Examples of Shortcuts"],
+    "tags": ["automation", "shortcuts"],
+    "image": "path/to/image1.jpg",
+    "content": "Learn how to automate tasks on your devices using shortcuts...",
+    "links": ["https://example.com/automation"]
+  },
+  {
+    "title": "Best Time-Saving Tips",
+    "subheadlines": ["Cutting down on repetitive tasks", "Essential tools"],
+    "tags": ["productivity", "tips"],
+    "image": "path/to/image2.jpg",
+    "content": "Discover tools and techniques that can help you save time daily...",
+    "links": ["https://example.com/tips"]
+  }
+]
