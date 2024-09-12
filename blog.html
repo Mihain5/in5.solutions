@@ -9,13 +9,99 @@
 </head>
 <body>
   <header>
+    <nav>
+      <!-- This is your persistent menu bar -->
+      <ul id="menu-bar">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </nav>
     <h1>IN5 Solutions Blog</h1>
     <input type="text" id="search" placeholder="Search by title, tag, or content" />
   </header>
+
   <main>
-    <div id="blog-posts">
-      <!-- Blog posts will be injected here by JavaScript -->
-    </div>
+    <!-- Section for blog categories -->
+    <section id="categories">
+      <h2>Actions by Category</h2>
+      <div class="category-container">
+        <div class="category" data-category="location">
+          <img src="location-icon.png" alt="Location Icon">
+          <h3>Location</h3>
+          <ul>
+            <li>Addresses</li>
+            <li>Location</li>
+            <li>Maps</li>
+            <li>Ride</li>
+            <li>Routing</li>
+            <li>Weather</li>
+          </ul>
+        </div>
+        <div class="category" data-category="sharing">
+          <img src="sharing-icon.png" alt="Sharing Icon">
+          <h3>Sharing</h3>
+          <ul>
+            <li>Clipboard</li>
+            <li>Mail</li>
+            <li>Messaging</li>
+            <li>Photos Sharing</li>
+            <li>System</li>
+          </ul>
+        </div>
+        <div class="category" data-category="web">
+          <img src="web-icon.png" alt="Web Icon">
+          <h3>Web</h3>
+          <ul>
+            <li>Articles</li>
+            <li>RSS</li>
+            <li>Safari</li>
+            <li>URLs</li>
+            <li>Web Requests</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section for displaying blog posts by category -->
+    <section id="blog-posts">
+      <h2>Blog Posts</h2>
+      <!-- Blog posts will be dynamically injected here -->
+      <div class="post-card" data-category="location">
+        <img src="location-post-image.png" alt="Post image">
+        <div class="post-content">
+          <h3>Exploring Local Addresses</h3>
+          <p>A short description of the blog post content.</p>
+          <p>Category: Location</p>
+          <p>Tags: #Maps, #Routing, #Weather</p>
+        </div>
+      </div>
+
+      <div class="post-card" data-category="sharing">
+        <img src="sharing-post-image.png" alt="Post image">
+        <div class="post-content">
+          <h3>Easy Sharing with Clipboard</h3>
+          <p>A short description of the blog post content.</p>
+          <p>Category: Sharing</p>
+          <p>Tags: #Clipboard, #Messaging</p>
+        </div>
+      </div>
+
+      <div class="post-card" data-category="web">
+        <img src="web-post-image.png" alt="Post image">
+        <div class="post-content">
+          <h3>Interacting with the Web</h3>
+          <p>A short description of the blog post content.</p>
+          <p>Category: Web</p>
+          <p>Tags: #Articles, #URLs, #WebRequests</p>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer>
+    <p>&copy; 2024 IN5 Solutions. All rights reserved.</p>
+  </footer>
 </body>
 </html>
