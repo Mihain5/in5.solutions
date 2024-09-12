@@ -617,7 +617,8 @@ footer {
     z-index: 1;
 }
 
-.nav-menu .dropdown.active .dropdown-menu {
+/* Show the dropdown menu on hover */
+.nav-menu .dropdown:hover .dropdown-menu {
     display: block;
 }
 
@@ -627,4 +628,18 @@ footer {
     font-size: inherit;
     cursor: pointer;
     color: inherit;
+}
+/* Dropdown styles */
+.nav-menu .dropdown {
+    position: relative;
+}
+
+.nav-menu .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    list-style: none;
+    z-index: 1;
 }
