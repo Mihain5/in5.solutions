@@ -504,4 +504,38 @@ nav {
       text-decoration: underline;
     }
 
+    /* Dropdown styles */
+    .nav-menu .dropdown {
+      position: relative;
+    }
+    
+    .nav-menu .dropdown-menu {
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      padding: 10px;
+      border: 1px solid #ccc;
+      list-style: none;
+      z-index: 1;
+    }
+    
+    .nav-menu .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+    
+    .nav-menu .dropdown-menu li {
+      margin: 0;
+    }
+    
+    .nav-menu .dropdown-menu li a {
+      padding: 10px;
+      display: block;
+      color: #000;
+      text-decoration: none;
+    }
+    
+    .nav-menu .dropdown-menu li a:hover {
+      background-color: #f1f1f1;
+    }
+
 }
