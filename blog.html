@@ -49,7 +49,6 @@
      </div>
   </section>
 
-
   <main>
     <!-- Section for blog categories -->
     <section id="categories">
@@ -92,43 +91,35 @@
       </div>
     </section>
 
-    <!-- Section for displaying blog posts by category -->
-    <section id="blog-posts">
+    <!-- Section for displaying blog posts in grid layout -->
+    <section id="blog-posts" class="what-i-do">
       <h2>Blog Posts</h2>
-      <!-- Blog posts will be dynamically injected here -->
-      <div class="post-card" data-category="location">
-        <img src="location-post-image.png" alt="Post image">
-        <div class="post-content">
+      <div class="services-grid">
+        <article class="service-card">
+          <div class="icon code-icon"></div>
           <h3>Exploring Local Addresses</h3>
           <p>A short description of the blog post content.</p>
-          <p>Category: Location</p>
-          <p>Tags: #Maps, #Routing, #Weather</p>
-        </div>
-      </div>
+          <a href="#" class="service-link">Read more →</a>
+        </article>
 
-      <div class="post-card" data-category="sharing">
-        <img src="sharing-post-image.png" alt="Post image">
-        <div class="post-content">
+        <article class="service-card">
+          <div class="icon lock-icon"></div>
           <h3>Easy Sharing with Clipboard</h3>
           <p>A short description of the blog post content.</p>
-          <p>Category: Sharing</p>
-          <p>Tags: #Clipboard, #Messaging</p>
-        </div>
-      </div>
+          <a href="#" class="service-link">Read more →</a>
+        </article>
 
-      <div class="post-card" data-category="web">
-        <img src="web-post-image.png" alt="Post image">
-        <div class="post-content">
+        <article class="service-card">
+          <div class="icon rocket-icon"></div>
           <h3>Interacting with the Web</h3>
           <p>A short description of the blog post content.</p>
-          <p>Category: Web</p>
-          <p>Tags: #Articles, #URLs, #WebRequests</p>
-        </div>
+          <a href="#" class="service-link">Read more →</a>
+        </article>
       </div>
     </section>
   </main>
 
-<footer class="site-footer">
+  <footer class="site-footer">
     <div class="container">
         <div class="footer-content">
             <div class="footer-brand">
@@ -157,7 +148,7 @@
             <p>Copyright © In5.solutions</p>
         </div>
     </div>
-</footer>
+  </footer>
 
 </body>
 </html>
