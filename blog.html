@@ -9,18 +9,33 @@
 </head>
 <body>
   <header>
-    <nav>
-      <!-- This is your persistent menu bar -->
-      <ul id="menu-bar">
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/blog">Blog</a></li>
-        <li><a href="/contact">Contact</a></li>
-      </ul>
-    </nav>
-    <h1>IN5 Solutions Blog</h1>
-    <input type="text" id="search" placeholder="Search by title, tag, or content" />
+     <div class="container">
+        <nav>
+             <div class="logo"><a href="#hero">In5.Solutions</a></div>
+             <ul class="nav-menu">
+                 <li><a href="#what-i-do">What I do</a></li>
+                 <li class="dropdown">
+                     <a href="#tailored-solutions">Solutions</a>
+                     <ul class="dropdown-menu">
+                         <li><a href="blog.html">Shortcuts Library</a></li>
+                     </ul>
+                 </li>
+                 <li><a href="#about">About</a></li>
+                 <li><a href="#contact">Contact</a></li>
+             </ul>
+            
+            <div class="social-icons">
+                 <a href="YOUR_X_PROFILE_URL" aria-label="X" target="_blank" rel="noopener noreferrer"><i class="fab fa-x-twitter"></i></a>
+                 <a href="https://www.linkedin.com/in/mikkelharpsoe/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                 <a href="mailto:Miha@in5.solutions" aria-label="Email"><i class="far fa-envelope"></i></a>
+             </div>
+             <button class="menu-toggle" aria-label="Toggle menu">
+                 <i class="fas fa-bars"></i>
+             </button>
+         </nav>
+     </div>
   </header>
+
 
   <main>
     <!-- Section for blog categories -->
