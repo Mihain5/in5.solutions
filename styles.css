@@ -460,4 +460,48 @@ nav {
     
     .submit-btn:hover {
         background-color: #16162b;
+    }
+    
+    body {
+      font-family: Arial, sans-serif;
+    }
+    
+    header {
+      text-align: center;
+      margin: 20px 0;
+    }
+    
+    #search {
+      padding: 10px;
+      font-size: 1.2em;
+    }
+    
+    #blog-posts article {
+      margin-bottom: 40px;
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+    
+    #blog-posts img {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    h2, h3 {
+      color: #333;
+    }
+    
+    p {
+      color: #666;
+    }
+    
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    
+    a:hover {
+      text-decoration: underline;
+    }
+
 }
