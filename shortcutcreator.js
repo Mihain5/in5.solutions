@@ -7,14 +7,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const shortcutLink = document.getElementById('shortcut-link');
   const shortcutDetails = document.getElementById('shortcut-details');
 
-  createShortcutBtn.addEventListener('click', () => {
+  createShortcutBtn.addEventListener('click', async () => {
     const jsonText = jsonInput.value;
 
     try {
       const shortcutData = JSON.parse(jsonText);
 
       // Generate the import URL
-      const importURL = generateImportURL(shortcutData);
+      const importURL = await generateImportURL(shortcutData);
 
       // Update the link
       shortcutLink.href = importURL;
@@ -26,26 +26,19 @@ document.addEventListener('DOMContentLoaded', () => {
       outputSection.style.display = 'block';
     } catch (error) {
       alert('Invalid JSON input. Please check your JSON code.');
+      console.error(error);
     }
   });
 
-  function generateImportURL(shortcutData) {
+  async function generateImportURL(shortcutData) {
     // Convert the shortcut data to plist XML
     const plist = jsonToPlist(shortcutData);
 
     // Convert plist to base64
-    const plistBlob = new Blob([plist], { type: 'text/xml' });
-    const reader = new FileReader();
-
-    return new Promise((resolve) => {
-      reader.onload = function () {
-        const base64Plist = btoa(reader.result);
-        const urlEncodedData = encodeURIComponent(base64Plist);
-        const importURL = `shortcuts://import-shortcut/?data=${urlEncodedData}`;
-        resolve(importURL);
-      };
-      reader.readAsBinaryString(plistBlob);
-    });
+    const base64Plist = btoa(unescape(encodeURIComponent(plist)));
+    const urlEncodedData = encodeURIComponent(base64Plist);
+    const importURL = `shortcuts://import-shortcut/?data=${urlEncodedData}`;
+    return importURL;
   }
 
   function jsonToPlist(json) {
@@ -66,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
         plist += jsonToPlistHelper(item);
       });
       plist += `</array>\n`;
-    } else if (typeof obj === 'object') {
+    } else if (typeof obj === 'object' && obj !== null) {
       plist += `<dict>\n`;
       for (let key in obj) {
         plist += `<key>${key}</key>\n`;
@@ -76,7 +69,12 @@ document.addEventListener('DOMContentLoaded', () => {
     } else if (typeof obj === 'string') {
       plist += `<string>${obj}</string>\n`;
     } else if (typeof obj === 'number') {
-      plist += `<real>${obj}</real>\n`;
+      // Distinguish between integers and real numbers
+      if (Number.isInteger(obj)) {
+        plist += `<integer>${obj}</integer>\n`;
+      } else {
+        plist += `<real>${obj}</real>\n`;
+      }
     } else if (typeof obj === 'boolean') {
       plist += obj ? `<true/>\n` : `<false/>\n`;
     } else {
