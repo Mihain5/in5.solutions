@@ -9,105 +9,105 @@
 </head>
 
 <body>
-  <!-- Header -->
-  <header>
-    <div class="container">
-      <nav>
-        <div class="logo"><a href="#hero">In5.Solutions</a></div>
-        <ul class="nav-menu">
-          <li><a href="#what-i-do">What I do</a></li>
-          <li class="dropdown">
-            <a href="#tailored-solutions">Solutions</a>
-            <ul class="dropdown-menu">
-              <li><a href="blog.html">Shortcuts Library</a></li>
-            </ul>
-          </li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-
-        <div class="social-icons">
-          <a href="YOUR_X_PROFILE_URL" aria-label="X" target="_blank" rel="noopener noreferrer"><i class="fab fa-x-twitter"></i></a>
-          <a href="https://www.linkedin.com/in/mikkelharpsoe/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
-          <a href="mailto:Miha@in5.solutions" aria-label="Email"><i class="far fa-envelope"></i></a>
-        </div>
-        <button class="menu-toggle" aria-label="Toggle menu">
-          <i class="fas fa-bars"></i>
-        </button>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Hero Section -->
-  <section id="hero" class="hero">
-    <div class="container">
-      <div class="hero-content">
-        <h1>Shortcut Creator</h1>
-        <p>Create your own iOS shortcuts easily by pasting your JSON code.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Main Content -->
-  <main>
-    <section id="shortcut-creator" class="shortcut-creator">
+    <!-- Header -->
+    <header>
       <div class="container">
-        <div class="creator-grid">
-          <!-- Left Side: Text -->
-          <div class="creator-text">
-            <h2>Build Your Shortcut</h2>
-            <p>Paste your JSON code on the right and click "Create Shortcut Link" to generate your iOS shortcut import link.</p>
+        <nav>
+          <div class="logo"><a href="#hero">In5.Solutions</a></div>
+          <ul class="nav-menu">
+            <li><a href="#what-i-do">What I do</a></li>
+            <li class="dropdown">
+              <a href="#tailored-solutions">Solutions</a>
+              <ul class="dropdown-menu">
+                <li><a href="blog.html">Shortcuts Library</a></li>
+              </ul>
+            </li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+  
+          <div class="social-icons">
+            <a href="YOUR_X_PROFILE_URL" aria-label="X" target="_blank" rel="noopener noreferrer"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/mikkelharpsoe/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:Miha@in5.solutions" aria-label="Email"><i class="far fa-envelope"></i></a>
           </div>
-          <!-- Right Side: JSON Input -->
-          <div class="creator-input">
-            <textarea id="json-input" rows="20" placeholder="Paste your JSON code here..."></textarea>
-            <button id="create-shortcut-btn">Create Shortcut Link</button>
-          </div>
-        </div>
-        <!-- Output Section -->
-        <div id="output-section" class="output-section" style="display: none;">
-          <h2>Your Shortcut Import Link</h2>
-          <p><a id="shortcut-link" href="#" target="_blank">Import Shortcut</a></p>
-          <h3>Shortcut Details</h3>
-          <div id="shortcut-details">
-            <!-- Shortcut details will be displayed here -->
-          </div>
+          <button class="menu-toggle" aria-label="Toggle menu">
+            <i class="fas fa-bars"></i>
+          </button>
+        </nav>
+      </div>
+    </header>
+  
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Shortcut Creator</h1>
+          <p>Create your own iOS shortcuts easily by pasting your JSON code.</p>
         </div>
       </div>
     </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-brand">
-          <div class="footer-logo">
-            In5.solutions
+  
+    <!-- Main Content -->
+    <main>
+      <section id="shortcut-creator" class="shortcut-creator">
+        <div class="container">
+          <div class="creator-grid">
+            <!-- Left Side: Text -->
+            <div class="creator-text">
+              <h2>Build Your Shortcut</h2>
+              <p>Paste your JSON code on the right and click "Create Shortcut Link" to generate your iOS shortcut import link.</p>
+            </div>
+            <!-- Right Side: JSON Input -->
+            <div class="creator-input">
+              <textarea id="json-input" rows="20" placeholder="Paste your JSON code here..."></textarea>
+              <button id="create-shortcut-btn">Create Shortcut Link</button>
+            </div>
           </div>
-          <div class="footer-social">
-            <a href="YOUR_X_PROFILE_URL" aria-label="X" target="_blank" rel="noopener noreferrer"><i class="fab fa-x-twitter"></i></a>
-            <a href="YOUR_LINKEDIN_PROFILE_URL" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
-            <a href="mailto:YOUR_EMAIL_ADDRESS" aria-label="Email"><i class="far fa-envelope"></i></a>
+          <!-- Output Section -->
+          <div id="output-section" class="output-section" style="display: none;">
+            <h2>Your Shortcut Import Link</h2>
+            <p><a id="shortcut-link" href="#" target="_blank">Import Shortcut</a></p>
+            <h3>Shortcut Details</h3>
+            <div id="shortcut-details">
+              <!-- Shortcut details will be displayed here -->
+            </div>
           </div>
         </div>
-        <nav class="footer-pages">
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </nav>
-        <div class="footer-contact">
-          <h3>Contact Me</h3>
-          <a href="mailto:Miha@In5.solutions">Miha@In5.solutions</a>
+      </section>
+    </main>
+  
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <div class="footer-logo">
+              In5.solutions
+            </div>
+            <div class="footer-social">
+              <a href="YOUR_X_PROFILE_URL" aria-label="X" target="_blank" rel="noopener noreferrer"><i class="fab fa-x-twitter"></i></a>
+              <a href="YOUR_LINKEDIN_PROFILE_URL" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+              <a href="mailto:YOUR_EMAIL_ADDRESS" aria-label="Email"><i class="far fa-envelope"></i></a>
+            </div>
+          </div>
+          <nav class="footer-pages">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+          <div class="footer-contact">
+            <h3>Contact Me</h3>
+            <a href="mailto:Miha@In5.solutions">Miha@In5.solutions</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>Copyright © In5.solutions</p>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>Copyright © In5.solutions</p>
-      </div>
-    </div>
-  </footer>
-</body>
+    </footer>
+  </body>
 </html>
 
