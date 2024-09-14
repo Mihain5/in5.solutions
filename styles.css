@@ -696,5 +696,55 @@ nav {
     footer p {
       font-size: 14px;
     }
+    
+    /* Shortcut Creator Section */
+    .shortcut-creator {
+      padding: 40px 0;
+    }
+    
+    .creator-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    
+    .creator-text, .creator-input {
+      flex: 1 1 45%;
+      margin: 10px;
+    }
+    
+    .creator-input textarea {
+      width: 100%;
+      height: 300px;
+      padding: 10px;
+    }
+    
+    .creator-input button {
+      margin-top: 10px;
+      padding: 10px 20px;
+    }
+    
+    .output-section {
+      margin-top: 40px;
+    }
+    
+    .output-section h2, .output-section h3 {
+      margin-bottom: 10px;
+    }
+    
+    .output-section p, .output-section ul {
+      margin-bottom: 10px;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .creator-grid {
+        flex-direction: column;
+      }
+    
+      .creator-text, .creator-input {
+        flex: 1 1 100%;
+        margin: 10px 0;
+      }
 
 }
