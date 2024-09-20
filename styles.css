@@ -508,7 +508,9 @@ nav {
     .nav-menu .dropdown {
       position: relative;
     }
-
+    .nav-menu .dropdown-menu li a {
+      text-align: left;
+    }
     .nav-menu .dropdown-menu {
       display: none;
       position: absolute;
