@@ -1,9 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Dropdown-menu funktionalitet
     const dropdown = document.querySelector('.dropdown');
-    const dropdownMenu = document.querySelector('.dropdown-menu');
 
-    // Tjekker om dropdown-elementet findes
     if (dropdown) {
         // Toggle dropdown menu
         dropdown.addEventListener('click', function(event) {
@@ -24,7 +22,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.querySelector('.menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
 
-    // Tjekker om menuToggle-elementet findes
     if (menuToggle && navMenu) {
         // Toggle mobile menu
         menuToggle.addEventListener('click', function(event) {
@@ -117,4 +114,53 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
+
+    // *** Start af koden fra blog.js ***
+
+    const blogContainer = document.getElementById('blog-posts');
+    const searchInput = document.getElementById('search');
+    const categoryLinks = document.querySelectorAll('.category');
+
+    if (blogContainer && searchInput) {
+        let allPosts = [];
+
+        // Fetch blog data
+        fetch('blogData.json')
+            .then(response => response.json())
+            .then(posts => {
+                allPosts = posts;
+                displayPosts(allPosts); // Initially display all posts
+                searchInput.addEventListener('input', () => filterPosts(searchInput.value));
+                categoryLinks.forEach(category => category.addEventListener('click', filterByCategory));
+            });
+
+        function displayPosts(posts) {
+            blogContainer.innerHTML = posts.map(post => `
+                <article>
+                    <h2>${post.title}</h2>
+                    ${post.subheadlines.map(sub => `<h3>${sub}</h3>`).join('')}
+                    <img src="${post.image}" alt="${post.title}">
+                    <p>${post.content}</p>
+                    ${post.links.map(link => `<a href="${link}" target="_blank">${link}</a>`).join('')}
+                    <p>Tags: ${post.tags.join(', ')}</p>
+                </article>
+            `).join('');
+        }
+
+        function filterPosts(query) {
+            const filteredPosts = allPosts.filter(post => 
+                post.title.toLowerCase().includes(query.toLowerCase()) ||
+                post.content.toLowerCase().includes(query.toLowerCase()) ||
+                post.tags.some(tag => tag.toLowerCase().includes(query.toLowerCase()))
+            );
+            displayPosts(filteredPosts);
+        }
+
+        function filterByCategory(e) {
+            const selectedCategory = e.currentTarget.getAttribute('data-category');
+            const filteredPosts = allPosts.filter(post => post.category.toLowerCase() === selectedCategory.toLowerCase());
+            displayPosts(filteredPosts);
+        }
+    }
+    // *** Slut af koden fra blog.js ***
 });
