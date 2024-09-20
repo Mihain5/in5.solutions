@@ -504,24 +504,32 @@ nav {
       text-decoration: underline;
     }
 
-    /* Dropdown styles */
+      /* Dropdown styles */
     .nav-menu .dropdown {
-        position: relative;
+      position: relative;
     }
 
     .nav-menu .dropdown-menu {
-        display: none;
-        position: absolute;
-        background-color: #fff;
-        padding: 10px;
-        border: 1px solid #ccc;
-        list-style: none;
-        z-index: 1;
-        min-width: 150px;
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      padding: 10px;
+      border: 1px solid #ccc;
+      list-style: none;
+      z-index: 1;
+      min-width: 160px; /* Juster denne værdi efter behov */
     }
 
     .nav-menu .dropdown.active .dropdown-menu {
-        display: block;
+      display: block;
+    }
+
+    .nav-menu .dropdown-menu li a {
+      text-decoration: none;
+      color: #333;
+      display: block;
+      padding: 8px 12px;
+      white-space: nowrap; /* Forhindrer teksten i at brydes */
     }
 
     .dropdown-toggle {
