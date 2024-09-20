@@ -3,36 +3,44 @@ document.addEventListener('DOMContentLoaded', function() {
     const dropdown = document.querySelector('.dropdown');
     const dropdownMenu = document.querySelector('.dropdown-menu');
 
-    // Toggle dropdown menu
-    dropdown.addEventListener('click', function(event) {
-        event.stopPropagation(); // Forhindrer klik-event i at lukke menuen
-        dropdown.classList.toggle('active'); // Tilføjer 'active' til '.dropdown'
-    });
+    // Tjekker om dropdown-elementet findes
+    if (dropdown) {
+        // Toggle dropdown menu
+        dropdown.addEventListener('click', function(event) {
+            event.stopPropagation(); // Forhindrer klik-event i at lukke menuen
+            dropdown.classList.toggle('active'); // Tilføjer 'active' til '.dropdown'
+        });
 
-    // Luk dropdown, hvis der klikkes udenfor
-    document.addEventListener('click', function() {
-        if (dropdown.classList.contains('active')) {
-            dropdown.classList.remove('active');
-        }
-    });
+        // Luk dropdown, hvis der klikkes udenfor
+        document.addEventListener('click', function(event) {
+            const isClickInsideDropdown = dropdown.contains(event.target);
+            if (!isClickInsideDropdown && dropdown.classList.contains('active')) {
+                dropdown.classList.remove('active');
+            }
+        });
+    }
 
     // Mobile menu funktionalitet
     const menuToggle = document.querySelector('.menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
 
-    // Toggle mobile menu
-    menuToggle.addEventListener('click', function() {
-        navMenu.classList.toggle('active');
-    });
+    // Tjekker om menuToggle-elementet findes
+    if (menuToggle && navMenu) {
+        // Toggle mobile menu
+        menuToggle.addEventListener('click', function(event) {
+            event.stopPropagation(); // Forhindrer klik-event i at boble op
+            navMenu.classList.toggle('active');
+        });
 
-    // Luk mobilmenuen, når der klikkes udenfor
-    document.addEventListener('click', function(event) {
-        const isClickInsideMenu = navMenu.contains(event.target);
-        const isClickOnMenuToggle = menuToggle.contains(event.target);
-        if (!isClickInsideMenu && !isClickOnMenuToggle && navMenu.classList.contains('active')) {
-            navMenu.classList.remove('active');
-        }
-    });
+        // Luk mobilmenuen, når der klikkes udenfor
+        document.addEventListener('click', function(event) {
+            const isClickInsideMenu = navMenu.contains(event.target);
+            const isClickOnMenuToggle = menuToggle.contains(event.target);
+            if (!isClickInsideMenu && !isClickOnMenuToggle && navMenu.classList.contains('active')) {
+                navMenu.classList.remove('active');
+            }
+        });
+    }
 
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -49,7 +57,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     behavior: 'smooth'
                 });
                 // Luk mobilmenuen efter klik på link
-                navMenu.classList.remove('active');
+                if (navMenu.classList.contains('active')) {
+                    navMenu.classList.remove('active');
+                }
             }
         });
     });
@@ -60,11 +70,11 @@ document.addEventListener('DOMContentLoaded', function() {
         window.clearTimeout(isScrolling);
         isScrolling = setTimeout(function() {
             let current = '';
-            const sections = document.querySelectorAll('section');
+            const sections = document.querySelectorAll('section[id]');
             const navLinks = document.querySelectorAll('.nav-menu a');
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
-                if (pageYOffset >= sectionTop - 70) {
+                if (window.pageYOffset >= sectionTop - 70) {
                     current = section.getAttribute('id');
                 }
             });
