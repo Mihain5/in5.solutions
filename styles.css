@@ -135,7 +135,7 @@ nav {
 
 /* What I Do Section */
 .what-i-do {
-    padding: 80px 0;
+    padding: 50px 0;
     background-color: #ffffff;
 }
 
@@ -748,7 +748,7 @@ nav {
 
       }
       #Quote .quote-text {
-        font-size: 24px;
+        font-size: 36px;
         text-align: center;
         font-style: italic;
         color: #888;
