@@ -508,7 +508,7 @@ nav {
     .nav-menu .dropdown {
       position: relative;
     }
-    
+
     .nav-menu .dropdown-menu {
       display: none;
       position: absolute;
@@ -518,12 +518,12 @@ nav {
       list-style: none;
       z-index: 1;
     }
-    
+
     /* Dropdown styles */
     .nav-menu .dropdown {
         position: relative;
     }
-    
+
     .nav-menu .dropdown-menu {
         display: none;
         position: absolute;
@@ -533,19 +533,20 @@ nav {
         list-style: none;
         z-index: 1;
     }
-    
+
     .nav-menu .dropdown.active .dropdown-menu {
         display: block;
     }
-    
+
     .dropdown-toggle {
         background: none;
         border: none;
         font-size: inherit;
         cursor: pointer;
         color: inherit;
-    
+
     }
+
     /* Search Bar */
     header {
       text-align: center;
