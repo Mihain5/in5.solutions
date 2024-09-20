@@ -506,21 +506,6 @@ nav {
 
     /* Dropdown styles */
     .nav-menu .dropdown {
-      position: relative;
-    }
-
-    .nav-menu .dropdown-menu {
-      display: none;
-      position: absolute;
-      background-color: #fff;
-      padding: 10px;
-      border: 1px solid #ccc;
-      list-style: none;
-      z-index: 1;
-    }
-
-    /* Dropdown styles */
-    .nav-menu .dropdown {
         position: relative;
     }
 
