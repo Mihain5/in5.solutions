@@ -517,6 +517,7 @@ nav {
         border: 1px solid #ccc;
         list-style: none;
         z-index: 1;
+        min-width: 150px;
     }
 
     .nav-menu .dropdown.active .dropdown-menu {
