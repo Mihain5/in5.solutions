@@ -504,7 +504,7 @@ nav {
       text-decoration: underline;
     }
 
-      /* Dropdown styles */
+    /* Dropdown styles */
     .nav-menu .dropdown {
       position: relative;
     }
@@ -513,11 +513,12 @@ nav {
       display: none;
       position: absolute;
       background-color: #fff;
-      padding: 10px;
+      padding: 10px 0;
       border: 1px solid #ccc;
       list-style: none;
       z-index: 1;
-      min-width: 160px; /* Juster denne værdi efter behov */
+      min-width: 180px; /* Juster denne værdi hvis nødvendigt */
+      white-space: nowrap; /* Forhindrer tekstombrydning */
     }
 
     .nav-menu .dropdown.active .dropdown-menu {
@@ -529,7 +530,6 @@ nav {
       color: #333;
       display: block;
       padding: 8px 12px;
-      white-space: nowrap; /* Forhindrer teksten i at brydes */
     }
 
     .dropdown-toggle {
