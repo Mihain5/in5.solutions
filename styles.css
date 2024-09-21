@@ -274,7 +274,6 @@ nav {
     margin-bottom: 10px;
     font-size: 14px;
 }
-
 /* Footer */
 .site-footer {
     background-color: #f8f9fa;
@@ -286,10 +285,12 @@ nav {
     display: flex;
     justify-content: space-between;
     margin-bottom: 40px;
+    flex-wrap: wrap; /* Gør det muligt at bryde linjen på mindre skærme */
 }
 
 .footer-brand, .footer-pages, .footer-contact {
     flex: 1;
+    margin-bottom: 20px; /* Tilføjer afstand mellem sektionerne på mindre skærme */
 }
 
 .footer-logo {
@@ -340,6 +341,32 @@ nav {
     text-align: center;
     padding-top: 20px;
     border-top: 1px solid #e0e0e0;
+    font-size: 14px;
+    color: #999;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Stacker footer-sektionerne vertikalt */
+        text-align: center; /* Centrerer indholdet for mobil */
+    }
+
+    .footer-brand, .footer-pages, .footer-contact {
+        margin-bottom: 30px;
+    }
+
+    .footer-social a {
+        margin-right: 10px; /* Mindre afstand mellem ikonerne på mobil */
+    }
+
+    .footer-bottom {
+        font-size: 12px; /* Mindre skriftstørrelse på mobilen */
+    }
 }
 
 /* Media Queries */
