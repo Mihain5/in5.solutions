@@ -465,6 +465,17 @@ nav {
         background-color: #16162b;
     }
     
+    @media (max-width: 768px) {
+    .contact-form {
+        padding: 0 10px; /* Tilføjer padding for mobil */
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%; /* Sørger for, at inputfelter fylder skærmen uden at være for brede */
+        font-size: 14px; /* Mindre tekststørrelse for bedre visning på små skærme */
+    }
+    
     body {
       font-family: Arial, sans-serif;
     }
